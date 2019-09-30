@@ -1,2 +1,4 @@
 joblib==0.13.2
-numpy>:w=1.15
+numpy>=1.15
+sklearn==0.0
+scikit-learn==0.20.2
