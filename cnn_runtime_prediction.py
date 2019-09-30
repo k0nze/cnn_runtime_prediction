@@ -9,12 +9,12 @@ path_to_cnn_json_file = "./data/json/alexnet.json"
 
 model_prefix = "./data/models/"
 
-path_to_convolution_model_file =     model_prefix + "convolution_model.joblib"
-path_to_max_pooling_model_file =     model_prefix + "max_pooling_model.joblib"
-path_to_lrn_model_file =             model_prefix + "lrn_model.joblib"
-path_to_fully_connected_model_file = model_prefix + "fully_connected_model.joblib"
-path_to_relu_model_file =            model_prefix + "relu_model.joblib"
-path_to_softmax_model_file =         model_prefix + "softmax_model.joblib"
+path_to_convolution_model_file =     model_prefix + "convolution_model_raspberrypi3bplus.joblib"
+path_to_max_pooling_model_file =     model_prefix + "max_pooling_model_raspberrypi3bplus.joblib"
+path_to_lrn_model_file =             model_prefix + "lrn_model_raspberrypi3bplus.joblib"
+path_to_fully_connected_model_file = model_prefix + "fully_connected_model_raspberrypi3bplus.joblib"
+path_to_relu_model_file =            model_prefix + "relu_model_raspberrypi3bplus.joblib"
+path_to_softmax_model_file =         model_prefix + "softmax_model_raspberrypi3bplus.joblib"
 
 
 # load prediction models
