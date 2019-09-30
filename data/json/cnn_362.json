@@ -1,0 +1,277 @@
+{
+    "0_convolution": {
+        "input_channels": 1,
+        "input_height": 132,
+        "input_width": 132,
+        "kernel_size": 9,
+        "output_channels": 32,
+        "padding": 1,
+        "stride": 1
+    },
+    "10_max_pooling": {
+        "input_channels": 128,
+        "input_height": 106,
+        "input_width": 106,
+        "kernel_size": 7,
+        "stride": 1
+    },
+    "11_max_pooling": {
+        "input_channels": 128,
+        "input_height": 100,
+        "input_width": 100,
+        "kernel_size": 5,
+        "stride": 1
+    },
+    "12_convolution": {
+        "input_channels": 128,
+        "input_height": 96,
+        "input_width": 96,
+        "kernel_size": 11,
+        "output_channels": 64,
+        "padding": 0,
+        "stride": 1
+    },
+    "13_convolution": {
+        "input_channels": 64,
+        "input_height": 86,
+        "input_width": 86,
+        "kernel_size": 7,
+        "output_channels": 96,
+        "padding": 0,
+        "stride": 1
+    },
+    "14_convolution": {
+        "input_channels": 96,
+        "input_height": 80,
+        "input_width": 80,
+        "kernel_size": 9,
+        "output_channels": 64,
+        "padding": 0,
+        "stride": 1
+    },
+    "15_lrn": {
+        "alpha": 0.0001,
+        "beta": 0.75,
+        "input_channels": 64,
+        "input_height": 72,
+        "input_width": 72,
+        "n": 5
+    },
+    "16_max_pooling": {
+        "input_channels": 64,
+        "input_height": 72,
+        "input_width": 72,
+        "kernel_size": 9,
+        "stride": 1
+    },
+    "17_max_pooling": {
+        "input_channels": 64,
+        "input_height": 64,
+        "input_width": 64,
+        "kernel_size": 7,
+        "stride": 1
+    },
+    "18_convolution": {
+        "input_channels": 64,
+        "input_height": 58,
+        "input_width": 58,
+        "kernel_size": 5,
+        "output_channels": 96,
+        "padding": 1,
+        "stride": 1
+    },
+    "19_convolution": {
+        "input_channels": 96,
+        "input_height": 58,
+        "input_width": 58,
+        "kernel_size": 3,
+        "output_channels": 128,
+        "padding": 0,
+        "stride": 1
+    },
+    "1_max_pooling": {
+        "input_channels": 32,
+        "input_height": 132,
+        "input_width": 132,
+        "kernel_size": 5,
+        "stride": 1
+    },
+    "20_convolution": {
+        "input_channels": 128,
+        "input_height": 56,
+        "input_width": 56,
+        "kernel_size": 5,
+        "output_channels": 96,
+        "padding": 1,
+        "stride": 1
+    },
+    "21_max_pooling": {
+        "input_channels": 96,
+        "input_height": 56,
+        "input_width": 56,
+        "kernel_size": 11,
+        "stride": 1
+    },
+    "22_convolution": {
+        "input_channels": 96,
+        "input_height": 46,
+        "input_width": 46,
+        "kernel_size": 5,
+        "output_channels": 128,
+        "padding": 1,
+        "stride": 1
+    },
+    "23_convolution": {
+        "input_channels": 128,
+        "input_height": 46,
+        "input_width": 46,
+        "kernel_size": 5,
+        "output_channels": 32,
+        "padding": 0,
+        "stride": 1
+    },
+    "24_lrn": {
+        "alpha": 0.0001,
+        "beta": 0.75,
+        "input_channels": 32,
+        "input_height": 42,
+        "input_width": 42,
+        "n": 5
+    },
+    "25_convolution": {
+        "input_channels": 32,
+        "input_height": 42,
+        "input_width": 42,
+        "kernel_size": 11,
+        "output_channels": 128,
+        "padding": 1,
+        "stride": 1
+    },
+    "26_convolution": {
+        "input_channels": 128,
+        "input_height": 42,
+        "input_width": 42,
+        "kernel_size": 9,
+        "output_channels": 32,
+        "padding": 1,
+        "stride": 1
+    },
+    "27_max_pooling": {
+        "input_channels": 32,
+        "input_height": 42,
+        "input_width": 42,
+        "kernel_size": 9,
+        "stride": 1
+    },
+    "28_max_pooling": {
+        "input_channels": 32,
+        "input_height": 34,
+        "input_width": 34,
+        "kernel_size": 7,
+        "stride": 1
+    },
+    "29_convolution": {
+        "input_channels": 32,
+        "input_height": 28,
+        "input_width": 28,
+        "kernel_size": 3,
+        "output_channels": 96,
+        "padding": 1,
+        "stride": 1
+    },
+    "2_max_pooling": {
+        "input_channels": 32,
+        "input_height": 128,
+        "input_width": 128,
+        "kernel_size": 3,
+        "stride": 1
+    },
+    "30_lrn": {
+        "alpha": 0.0001,
+        "beta": 0.75,
+        "input_channels": 96,
+        "input_height": 28,
+        "input_width": 28,
+        "n": 5
+    },
+    "31_convolution": {
+        "input_channels": 96,
+        "input_height": 28,
+        "input_width": 28,
+        "kernel_size": 11,
+        "output_channels": 64,
+        "padding": 0,
+        "stride": 1
+    },
+    "32_fully_connected": {
+        "input_size": 20736,
+        "output_size": 500
+    },
+    "33_relu": {
+        "input_size": 500
+    },
+    "34_softmax": {
+        "input_size": 500
+    },
+    "3_convolution": {
+        "input_channels": 32,
+        "input_height": 126,
+        "input_width": 126,
+        "kernel_size": 11,
+        "output_channels": 32,
+        "padding": 1,
+        "stride": 1
+    },
+    "4_max_pooling": {
+        "input_channels": 32,
+        "input_height": 126,
+        "input_width": 126,
+        "kernel_size": 9,
+        "stride": 1
+    },
+    "5_convolution": {
+        "input_channels": 32,
+        "input_height": 118,
+        "input_width": 118,
+        "kernel_size": 11,
+        "output_channels": 128,
+        "padding": 1,
+        "stride": 1
+    },
+    "6_convolution": {
+        "input_channels": 128,
+        "input_height": 118,
+        "input_width": 118,
+        "kernel_size": 9,
+        "output_channels": 128,
+        "padding": 1,
+        "stride": 1
+    },
+    "7_convolution": {
+        "input_channels": 128,
+        "input_height": 118,
+        "input_width": 118,
+        "kernel_size": 7,
+        "output_channels": 128,
+        "padding": 0,
+        "stride": 1
+    },
+    "8_convolution": {
+        "input_channels": 128,
+        "input_height": 112,
+        "input_width": 112,
+        "kernel_size": 3,
+        "output_channels": 32,
+        "padding": 1,
+        "stride": 1
+    },
+    "9_convolution": {
+        "input_channels": 32,
+        "input_height": 112,
+        "input_width": 112,
+        "kernel_size": 7,
+        "output_channels": 128,
+        "padding": 0,
+        "stride": 1
+    }
+}

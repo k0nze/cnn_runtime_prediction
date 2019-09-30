@@ -1,0 +1,96 @@
+{
+    "0_convolution": {
+        "input_channels": 1,
+        "input_height": 196,
+        "input_width": 196,
+        "kernel_size": 7,
+        "output_channels": 128,
+        "padding": 0,
+        "stride": 3
+    },
+    "10_fully_connected": {
+        "input_size": 300,
+        "output_size": 10
+    },
+    "11_relu": {
+        "input_size": 10
+    },
+    "12_fully_connected": {
+        "input_size": 10,
+        "output_size": 10
+    },
+    "13_relu": {
+        "input_size": 10
+    },
+    "14_softmax": {
+        "input_size": 10
+    },
+    "1_max_pooling": {
+        "input_channels": 128,
+        "input_height": 64,
+        "input_width": 64,
+        "kernel_size": 7,
+        "stride": 1
+    },
+    "2_max_pooling": {
+        "input_channels": 128,
+        "input_height": 58,
+        "input_width": 58,
+        "kernel_size": 3,
+        "stride": 1
+    },
+    "3_convolution": {
+        "input_channels": 128,
+        "input_height": 56,
+        "input_width": 56,
+        "kernel_size": 9,
+        "output_channels": 96,
+        "padding": 0,
+        "stride": 1
+    },
+    "4_lrn": {
+        "alpha": 0.0001,
+        "beta": 0.75,
+        "input_channels": 96,
+        "input_height": 48,
+        "input_width": 48,
+        "n": 5
+    },
+    "5_convolution": {
+        "input_channels": 96,
+        "input_height": 48,
+        "input_width": 48,
+        "kernel_size": 5,
+        "output_channels": 32,
+        "padding": 0,
+        "stride": 3
+    },
+    "6_convolution": {
+        "input_channels": 32,
+        "input_height": 15,
+        "input_width": 15,
+        "kernel_size": 11,
+        "output_channels": 96,
+        "padding": 1,
+        "stride": 1
+    },
+    "7_lrn": {
+        "alpha": 0.0001,
+        "beta": 0.75,
+        "input_channels": 96,
+        "input_height": 15,
+        "input_width": 15,
+        "n": 5
+    },
+    "8_max_pooling": {
+        "input_channels": 96,
+        "input_height": 15,
+        "input_width": 15,
+        "kernel_size": 3,
+        "stride": 3
+    },
+    "9_fully_connected": {
+        "input_size": 2400,
+        "output_size": 300
+    }
+}

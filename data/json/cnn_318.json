@@ -1,0 +1,57 @@
+{
+    "0_convolution": {
+        "input_channels": 3,
+        "input_height": 36,
+        "input_width": 36,
+        "kernel_size": 7,
+        "output_channels": 128,
+        "padding": 1,
+        "stride": 1
+    },
+    "1_max_pooling": {
+        "input_channels": 128,
+        "input_height": 36,
+        "input_width": 36,
+        "kernel_size": 9,
+        "stride": 1
+    },
+    "2_convolution": {
+        "input_channels": 128,
+        "input_height": 28,
+        "input_width": 28,
+        "kernel_size": 7,
+        "output_channels": 128,
+        "padding": 0,
+        "stride": 1
+    },
+    "3_convolution": {
+        "input_channels": 128,
+        "input_height": 22,
+        "input_width": 22,
+        "kernel_size": 3,
+        "output_channels": 64,
+        "padding": 1,
+        "stride": 5
+    },
+    "4_fully_connected": {
+        "input_size": 1600,
+        "output_size": 400
+    },
+    "5_relu": {
+        "input_size": 400
+    },
+    "6_fully_connected": {
+        "input_size": 400,
+        "output_size": 100
+    },
+    "7_relu": {
+        "input_size": 100
+    },
+    "8_fully_connected": {
+        "input_size": 100,
+        "output_size": 10
+    },
+    "9_softmax": {
+        "input_size": 10
+    }
+}

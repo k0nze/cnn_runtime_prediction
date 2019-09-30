@@ -1,0 +1,31 @@
+{
+    "0_convolution": {
+        "input_channels": 3,
+        "input_height": 188,
+        "input_width": 188,
+        "kernel_size": 3,
+        "output_channels": 32,
+        "padding": 0,
+        "stride": 5
+    },
+    "1_convolution": {
+        "input_channels": 32,
+        "input_height": 38,
+        "input_width": 38,
+        "kernel_size": 5,
+        "output_channels": 32,
+        "padding": 1,
+        "stride": 5
+    },
+    "2_fully_connected": {
+        "input_size": 2048,
+        "output_size": 10
+    },
+    "3_fully_connected": {
+        "input_size": 10,
+        "output_size": 10
+    },
+    "4_softmax": {
+        "input_size": 10
+    }
+}
