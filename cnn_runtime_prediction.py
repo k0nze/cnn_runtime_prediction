@@ -2,19 +2,48 @@ import joblib
 import numpy as np
 import json
 
-# clock speed in Hz
-clock_speed = 1.4e9
-
 path_to_cnn_json_file = "./data/json/alexnet.json"
+hardware_platform = "odroidxu4" # raspberrypi2bv11, odroidxu4
 
-model_prefix = "./data/models/"
+if hardware_platform == "raspberrypi3bplus":
+    # clock speed in Hz
+    clock_speed = 1.4e9
 
-path_to_convolution_model_file =     model_prefix + "convolution_model_raspberrypi3bplus.joblib"
-path_to_max_pooling_model_file =     model_prefix + "max_pooling_model_raspberrypi3bplus.joblib"
-path_to_lrn_model_file =             model_prefix + "lrn_model_raspberrypi3bplus.joblib"
-path_to_fully_connected_model_file = model_prefix + "fully_connected_model_raspberrypi3bplus.joblib"
-path_to_relu_model_file =            model_prefix + "relu_model_raspberrypi3bplus.joblib"
-path_to_softmax_model_file =         model_prefix + "softmax_model_raspberrypi3bplus.joblib"
+    model_prefix = "./data/models/"
+
+    path_to_convolution_model_file =     model_prefix + "convolution_model_raspberrypi3bplus.joblib"
+    path_to_max_pooling_model_file =     model_prefix + "max_pooling_model_raspberrypi3bplus.joblib"
+    path_to_lrn_model_file =             model_prefix + "lrn_model_raspberrypi3bplus.joblib"
+    path_to_fully_connected_model_file = model_prefix + "fully_connected_model_raspberrypi3bplus.joblib"
+    path_to_relu_model_file =            model_prefix + "relu_model_raspberrypi3bplus.joblib"
+    path_to_softmax_model_file =         model_prefix + "softmax_model_raspberrypi3bplus.joblib"
+
+elif hardware_platform == "raspberrypi2bv11":
+    # clock speed in Hz
+    clock_speed = 900e6
+
+    model_prefix = "./data/models/"
+
+    path_to_convolution_model_file =     model_prefix + "convolution_model_raspberrypi2bv11.joblib"
+    path_to_max_pooling_model_file =     model_prefix + "max_pooling_model_raspberrypi2bv11.joblib"
+    path_to_lrn_model_file =             model_prefix + "lrn_model_raspberrypi2bv11.joblib"
+    path_to_fully_connected_model_file = model_prefix + "fully_connected_model_raspberrypi2bv11.joblib"
+    path_to_relu_model_file =            model_prefix + "relu_model_raspberrypi2bv11.joblib"
+    path_to_softmax_model_file =         model_prefix + "softmax_model_raspberrypi2bv11.joblib"
+
+elif hardware_platform == "odroidxu4":
+    # clock speed in Hz
+    clock_speed = 2.0e9
+
+    model_prefix = "./data/models/"
+
+    path_to_convolution_model_file =     model_prefix + "convolution_model_odroidxu4.joblib"
+    path_to_max_pooling_model_file =     model_prefix + "max_pooling_model_odroidxu4.joblib"
+    path_to_lrn_model_file =             model_prefix + "lrn_model_odroidxu4.joblib"
+    path_to_fully_connected_model_file = model_prefix + "fully_connected_model_odroidxu4.joblib"
+    path_to_relu_model_file =            model_prefix + "relu_model_odroidxu4.joblib"
+    path_to_softmax_model_file =         model_prefix + "softmax_model_odroidxu4.joblib"
+
 
 
 # load prediction models
@@ -43,6 +72,8 @@ def lrn_num_mul_div_ops(Iw, Ih, Ic, n):
 def fully_connected_num_mac_ops(Iw, Ow):
     return Iw * Ow
 
+
+print("CNN: " + path_to_cnn_json_file + "\n")
 
 # read CNN json description
 with open(path_to_cnn_json_file) as cnn_json_file:
@@ -163,5 +194,6 @@ for layer_name in layer_names:
 run_time = predicted_cpu_cycles/clock_speed
 
 print()
+print("Hardware Platform:    " + hardware_platform)
 print("Predicted CPU cycles: " + str(int(predicted_cpu_cycles)))
 print("Predicted Runtime:    " + str(round(run_time, 5)) + " s")
